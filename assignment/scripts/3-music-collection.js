@@ -13,23 +13,13 @@ function addToCollection(title, artist, yearPublished) {
     return collection.push(album);
 
 }
-addToCollection('Bad Behavior', 'Broncho', 2018);
 
+addToCollection('Bad Behavior', 'Broncho', 2018);
 addToCollection('Blue', 'Joni Mitchell', 1971);
 addToCollection('Just Enough Hip to Be a Woman', 'Broncho', 2014);
 addToCollection('My Woman', 'Angel Olsen', 2016);
 addToCollection('Electric Warrior', 'T.Rex', 1971);
 addToCollection('Out of Blue', 'Electric Light Orchestra', 1977);
-
-//console.log(collection);
-
-// function showCollection([]) {
-//     console.log(collection.length);
-//     for (let i = 0; i < collection.length; i++) {
-//         console.log(album.title + 'by' + album.artist + 'published in' + album.yearPublished);
-
-//     }
-// }
 
 function showCollection(x) {
     console.log(x.length);
@@ -44,8 +34,19 @@ function showCollection(x) {
 showCollection(collection);
 
 
+function findByArtist(artist) {
+    resultArray = [];
+    for (let i = 0; i < collection.length; i++) {
+        if (artist === collection[i].artist) {
+            resultArray.push(collection[i]);
+        }
+    }
+    return resultArray;
+}
 
-
+console.log(findByArtist('Broncho'));
+console.log(findByArtist('Joni Mitchell'));
+console.log(findByArtist('Derek'));
 
 
 
